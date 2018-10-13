@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded',() =>{
 //add listenter to item with id so that it can see when the event happens //
 
 //find the new-instrument-form id//
-    const addInstrumentForm = document.querySelector('#add-instrument-form');
+  const addInstrumentForm = document.querySelector('#add-instrument-form');
         addInstrumentForm.addEventListener('submit', handleFormSubmit)
         //what happens when submit is clicked//
         const deleteAllButton = document.querySelector('#delete-all');
         deleteAllButton.addEventListener('click', handleDeleteAllClick);
-    });
+  });
 
-    const handleDeleteAllClick = function (event) {
+  const handleDeleteAllClick = function (event) {
         const allInstruments = document.querySelector('#instrument-placement');
         allInstruments.innerHTML = ' ';
 
-    };
-    const handleFormSubmit = function(event) {
+  };
+  const handleFormSubmit = function(event) {
       event.preventDefault(); //still can't remember what this does but I know I need it
 
       // find place on page the data is to be input #instrument-placement
@@ -26,19 +26,25 @@ document.addEventListener('DOMContentLoaded',() =>{
       InstrumentListContent.appendChild(InstrumentListItem);
       // clear the form
       event.target.reset();
-    };
+  };
 
-    createInstrument = function(){
+  createInstrument = function(){
         const div = document.createElement('div');
-        div.classList.add('divFormat');
+        div.classList.add('divFormat')
+        // const img = document.createElement('img');
+        // div.appendChild(img);
+        instrument = event.target.instrumentText.value
+        family = event.target.family.value
+        commonClassification = event.target.commonClassification.value
+
         const p1 = document.createElement('p');
         div.appendChild(p1);
-        p1.textContent = `Instrument Name: ${event.target.instrumentText.value}`
+        p1.textContent = `Instrument Name: ${instrument}`
         const p2 = document.createElement('p')
         div.appendChild(p2);
-        p2.textContent = `Instrument Family: ${event.target.family.value}`
+        p2.textContent = `Instrument Family: ${family}`
         const p3 = document.createElement('p')
         div.appendChild(p3);
-        p3.textContent = `Common Classification: ${event.target.commonClassification.value}`
+        p3.textContent = `Common Classification: ${commonClassification}`
         return div;
-    };
+  };

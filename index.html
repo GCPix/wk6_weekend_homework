@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Instrument List</title>
+  <script src = "js/start.js"></script>
 </head>
 <body>
-  <form>
+  <form id = "add-instrument-form"> <!-- why do we use id rather than class? -->
       <div>
         <div>
           <label for="instrument">Instrument</label>
-          <input type="text"/>
+          <input type="text" id = "instrumentText"/>
         </div>
 
         <div>
-          <label for="Famly">Family</label>
-          <input type="text"/>
+          <label for="family">Family</label>
+          <input type="text" id = "family"/>
         </div>
 
         <div>
-          <label for="category">Category</label>
-          <select>
+          <label for="common-classication">Common Classifcation</label>
+          <select id = "commonClassification">
             <option value="" disabled selected></option>
             <option value="Free Reed">Free Reed</option>
             <option value="Reed">Reed</option>
@@ -34,6 +35,6 @@
     </form>
 
     <h1>Instrument Details</h1>
-    <div class = "section-wrapper"></div>
+    <div class = "section-wrapper" id = "instrument-placement"></div>
 </body>
 </html>

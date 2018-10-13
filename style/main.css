@@ -1,3 +1,48 @@
 #add-instrument-form{
 
 }
+
+.section-wrapper{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.divFormat{
+  min-width: 1em;
+  border: 5px red solid;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 15%;
+
+}
+
+label{
+  min-width: 160px;
+display: inline-block;
+text-transform: capitalize;
+padding: 10px;
+}
+
+input[type = 'text']{
+  height: 15px;
+  width: 300px;
+
+}
+#instrument-placement{
+
+
+}
+body{
+background-color: black;
+color: white;
+font-family: sans-serif;
+}
+
+
+button, input[type='submit']{
+  padding: 10px;
+  margin: 10px;
+  background-color: darkred;
+  color: white;
+  border-radius: 15%;
+}

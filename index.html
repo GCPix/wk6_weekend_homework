@@ -9,41 +9,51 @@
   <link rel="stylesheet" type="text/css" href="style/main.css" />
 </head>
 <body>
-  <form id = "add-instrument-form"> <!-- why do we use id rather than class? -->
-      <div>
+  <div class = "row topPanel">
+    <h1 class = "cell">My Instrument List</h1>
+
+  </div>
+  <div class = "row">
+    <div class = "cell leftPanel">
+    <form id = "add-instrument-form"> <!-- why do we use id rather than class? -->
         <div>
-          <label for="instrument">Instrument</label>
-          <input type="text" id = "instrumentText"/>
+          <div>
+            <label for="instrument">Instrument</label>
+            <input type="text" id = "instrumentText"/>
+          </div>
+
+          <div>
+            <label for="family">Family</label>
+            <input type="text" id = "family"/>
+          </div>
+
+
+          <div>
+            <label for="common-classication">Common Classifcation</label>
+            <select id = "commonClassification">
+                <option value="" disabled selected></option>
+              <option value="Free Reed">Free Reed</option>
+              <option value="Reed">Reed</option>
+              <option value="Woodwind ">Woodwind</option>
+              <option value="Brass ">Brass</option>
+            </select>
+          </div>
+          <!-- <div>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+          </form>
+          </div> -->
         </div>
-
-        <div>
-          <label for="family">Family</label>
-          <input type="text" id = "family"/>
-        </div>
-
-
-        <div>
-          <label for="common-classication">Common Classifcation</label>
-          <select id = "commonClassification">
-            <option value="" disabled selected></option>
-            <option value="Free Reed">Free Reed</option>
-            <option value="Reed">Reed</option>
-            <option value="Woodwind ">Woodwind</option>
-            <option value="Brass ">Brass</option>
-          </select>
-        </div>
-        <!-- <div>
-          <form action="upload.php" method="post" enctype="multipart/form-data">
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        </div> -->
-      </div>
-      <input type="submit" value="SAVE"/>
-    </form>
-
+        <input type="submit" value="SAVE"/>
+      </form>
+  </div>
+    <div class = "cell rightPanel">
     <h1>Instrument Details</h1>
     <div class = "section-wrapper" id = "instrument-placement"></div>
     <button id = "delete-all">DELETE</button>
+
+</div>
+  </div>
 </body>
 </html>

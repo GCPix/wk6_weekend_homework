@@ -1,7 +1,36 @@
 #add-instrument-form{
 
 }
+.grid{
 
+
+
+}
+.row{
+  display:flex;
+  flex-direction: row;
+}
+
+.cell{
+  flex:1;
+  margin: 0,15px;
+}
+
+.topPanel{
+  background-color: darkred;
+
+}
+.leftPanel{
+  max-width: 25%;
+  min-height: 620px;
+  background: darkred;
+  background-size: auto;
+
+}
+.rightPanel{
+ margin-left: 15px;
+
+}
 .section-wrapper{
   display: inline-flex;
   flex-wrap: wrap;
@@ -9,7 +38,7 @@
 
 .divFormat{
   min-width: 1em;
-  border: 5px red solid;
+  border: 5px darkred solid;
   margin-right: 10px;
   padding: 10px;
   border-radius: 15%;

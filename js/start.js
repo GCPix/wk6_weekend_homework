@@ -31,12 +31,15 @@ document.addEventListener('DOMContentLoaded',() =>{
   createInstrument = function(){
         const div = document.createElement('div');
         div.classList.add('divFormat')
-        // const img = document.createElement('img');
-        // div.appendChild(img);
+
+        image = event.target.instrumentPicture.value
         instrument = event.target.instrumentText.value
         family = event.target.family.value
         commonClassification = event.target.commonClassification.value
 
+        const img = document.createElement('img');
+        div.appendChild(img);
+        img.src = image;
         const p1 = document.createElement('p');
         div.appendChild(p1);
         p1.textContent = `Instrument Name: ${instrument}`

@@ -1,3 +1,5 @@
+
+
 #add-instrument-form{
 
 }
@@ -65,6 +67,8 @@ body{
 background-color: black;
 color: white;
 font-family: sans-serif;
+margin:0;
+padding:0;
 }
 
 

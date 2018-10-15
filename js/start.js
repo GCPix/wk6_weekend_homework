@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded',() =>{
 
   };
   const handleFormSubmit = function(event) {
-      event.preventDefault(); //still can't remember what this does but I know I need it
 
+      event.preventDefault(); //still can't remember what this does but I know I need it
+      //console.log(event.target.elements);
       // find place on page the data is to be input #instrument-placement
       const InstrumentListContent = document.querySelector('#instrument-placement')
       //get content together from the form that you want to appendChild
@@ -26,13 +27,14 @@ document.addEventListener('DOMContentLoaded',() =>{
       InstrumentListContent.appendChild(InstrumentListItem);
       // clear the form
       event.target.reset();
+      //document.add-instrument-form.instrumentText.focus();
   };
 
-  createInstrument = function(event){
+  createInstrument = function(){
         const div = document.createElement('div');
         div.classList.add('divFormat')
 
-        image = event.target.instrumentPicture.value
+        image = URL.createObjectURL(event.target.instrumentPicture.files[0])
         instrument = event.target.instrumentText.value
         family = event.target.family.value
         commonClassification = event.target.commonClassification.value
@@ -51,5 +53,5 @@ document.addEventListener('DOMContentLoaded',() =>{
         p3.textContent = `Common Classification: ${commonClassification}`
         return div;
 
-        //if I had added a radion button I would need a case/if statement to tell it which one to print.  if I had added checkbboxes I would need a for loop as this is brought back as an array (you can choose more than one value)
+
   };

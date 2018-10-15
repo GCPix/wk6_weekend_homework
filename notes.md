@@ -44,14 +44,20 @@ note: the function variable name ties to the name at the bottom the page
 
       You also need content:
 
+      As we don't want to search the html more than once it is best to assign the path to a variable once found so that we hold it within the function.
 
+        itemVar1 = event.target.itemName.value
+        if this is to go inside var2 from the elements you would write
+
+        var2.attribute = itemVar1
+        attribute might be TextContent or src
+
+
+
+      };
       return var1
     };
 
-order of items within the initial listener:
-
-
-    towards the top of the initial listener you need the function that actually tells the computer what needs to be done when the eventListener sees what it is looking for.
 
 
 

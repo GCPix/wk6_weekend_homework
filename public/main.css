@@ -79,3 +79,7 @@ button, input[type='submit']{
   color: white;
   border-radius: 15%;
 }
+img{
+  max-height: 150px;
+  width:auto;
+}

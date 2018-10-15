@@ -1,6 +1,8 @@
 everything is wrapped in an event listener.
 
-The listener looks for DOMContentLoaded, when it see it it starts to run the callback?
+The listener looks for DOMContentLoaded, when it see it it starts to run the callback.
+
+within the callback you list the following:
 
 ABOVE the listener we need to declare the variable that the listener will be looking for.  the variable will hold the position in the document that we are looking at.
 

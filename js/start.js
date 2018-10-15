@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',() =>{
       event.target.reset();
   };
 
-  createInstrument = function(){
+  createInstrument = function(event){
         const div = document.createElement('div');
         div.classList.add('divFormat')
 
@@ -50,4 +50,6 @@ document.addEventListener('DOMContentLoaded',() =>{
         div.appendChild(p3);
         p3.textContent = `Common Classification: ${commonClassification}`
         return div;
+
+        //if I had added a radion button I would need a case/if statement to tell it which one to print.  if I had added checkbboxes I would need a for loop as this is brought back as an array (you can choose more than one value)
   };
